@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #fafafa;
+    }
+    .target {
+      --nara-logo-width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <nara-logo class="target"></nara-logo>
+  <nara-logo format="eagle"></nara-logo>
+  <nara-logo format="horizontal"></nara-logo>
+  <nara-logo format="stacked"></nara-logo>
+
+  <script type="module">
+    import { html, render } from 'lit-html';
+    import '../nara-logo.js';
+  </script>
+</body>
+</html>

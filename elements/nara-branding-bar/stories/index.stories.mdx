@@ -1,0 +1,55 @@
+import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
+
+import '../nara-branding-bar.js';
+
+<Meta 
+  title="NaraBrandingBar"
+  parameters={{
+    component: "nara-branding-bar",
+    options: { selectedPanel: "storybookjs/knobs/panel" }
+  }}
+/>
+
+# NaraBrandingBar
+
+A component for...
+
+## Features:
+
+- a
+- b
+- ...
+
+## How to use
+
+### Installation
+
+```bash
+yarn add nara-branding-bar
+```
+
+```js
+import 'nara-branding-bar/nara-branding-bar.js';
+```
+
+<Preview withToolbar>
+  <Story name="Simple">
+    {html`
+      <nara-branding-bar></nara-branding-bar>
+    `}
+  </Story>
+</Preview>
+
+## API
+
+<Props of="nara-branding-bar" />
+
+## Variations
+
+###### Custom Title
+
+<Story name="Custom Title">
+  {html`
+    <nara-branding-bar .title=${'Hello World'}></nara-branding-bar>
+  `}
+</Story>

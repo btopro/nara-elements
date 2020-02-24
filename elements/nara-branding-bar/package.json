@@ -1,0 +1,56 @@
+{
+  "name": "nara-branding-bar",
+  "version": "0.0.0",
+  "description": "Webcomponent nara-branding-bar following open-wc recommendations",
+  "author": "nara-branding-bar",
+  "license": "MIT",
+  "main": "index.js",
+  "module": "index.js",
+  "scripts": {
+    "start": "yarn run serve",
+    "serve": "../../node_modules/.bin/es-dev-server -c ../../es-dev-server.config.js",
+    "build": "rimraf dist && rollup -c rollup.config.js"
+  },
+  "dependencies": {
+    "@lrnwebcomponents/simple-modal": "^2.4.4",
+    "lit-element": "^2.2.1",
+    "lit-html": "^1.1.2"
+  },
+  "devDependencies": {
+    "rollup-plugin-cpy": "^2.0.1",
+    "es-dev-server": "^1.5.0",
+    "eslint": "^6.1.0",
+    "@open-wc/eslint-config": "^2.0.0",
+    "@open-wc/prettier-config": "^0.1.10",
+    "husky": "^1.0.0",
+    "lint-staged": "^8.0.0",
+    "@open-wc/testing-karma": "^3.0.0",
+    "webpack-merge": "^4.1.5",
+    "@open-wc/testing-karma-bs": "^1.0.0",
+    "@open-wc/testing": "^2.0.0",
+    "@open-wc/demoing-storybook": "^1.0.1",
+    "deepmerge": "^3.2.0",
+    "@open-wc/building-rollup": "^0.15.1",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.15.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@open-wc/eslint-config",
+      "eslint-config-prettier"
+    ]
+  },
+  "prettier": "@open-wc/prettier-config",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
